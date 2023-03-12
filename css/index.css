@@ -41,7 +41,10 @@ main{
 .contact{
     color: aliceblue;
    background-color: black;
-   
+   display: flex ;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: nowrap;
 }
 .container-info:hover{
     transition:  all 1s !important;
@@ -78,8 +81,15 @@ main{
 @media screen and (max-width:600px) {
     .container-info{
         width: 90%;
+        display: block;;
+        flex-wrap: nowrap !important;
+        overflow-x: auto ;
     }
     .info{
         width: 100%;
+    }
+    .container-contacto{
+        width: 90% !important; 
+       
     }
 }
