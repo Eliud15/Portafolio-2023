@@ -1,0 +1,85 @@
+body{
+    padding: 10px;
+}
+*{
+     font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+h1,h2{
+    font-weight: 800;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-info{
+    width: 60%;
+    height: 130px;
+    color: black ;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 40px;
+    background: transparent;
+    transition:  all 1s !important;
+    user-select: none;
+}
+.about{
+     background:linear-gradient(to right, lightseagreen, lime) ;
+    
+}
+.skills{
+    background:linear-gradient(to right, yellow, red) ;
+   
+}
+.proyects{
+    background:linear-gradient(to right, purple, chocolate) ;
+   
+}
+.contact{
+    color: aliceblue;
+   background-color: black;
+   
+}
+.container-info:hover{
+    transition:  all 1s !important;
+    filter: invert(1);
+}
+.info{
+    border-top: none;
+    width: 60%;
+    height: 1px;
+    color: black ;
+    margin-top: -6px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 40px;
+    user-select: none;
+   overflow-y: auto;
+}
+.info_about,.info_proyects,.info_skills,.info_contact{
+    animation: aparecer 0.5s   forwards;
+}
+
+@keyframes aparecer {
+    from{
+      overflow: hidden;
+      height: 1px;
+    }
+    to{
+        overflow: hidden;
+        width: 60%;
+        height: auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .container-info{
+        width: 90%;
+    }
+    .info{
+        width: 100%;
+    }
+}
