@@ -63,6 +63,9 @@ main{
     user-select: none;
    overflow-y: auto;
 }
+.info_about{
+    width: 100%;
+}
 .info_about,.info_proyects,.info_skills,.info_contact{
     animation: aparecer 0.5s   forwards;
 }
@@ -78,7 +81,7 @@ main{
         height: auto;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:1054px) {
     .container-info{
         width: 90%;
         display: block;;
@@ -86,10 +89,28 @@ main{
         overflow-x: auto ;
     }
     .info{
-        width: 100%;
+        width: 1200%;
     }
     .container-contacto{
         width: 90% !important; 
        
     }
+   
 }
+@keyframes aparecer2 {
+    from{
+      overflow: hidden;
+      height: 1px;
+    }
+    to{
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .info{
+        animation: aparecer2 0.5s  ease-in-out forwards !important;
+    }
+}
+
